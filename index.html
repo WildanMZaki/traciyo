@@ -281,8 +281,8 @@
                             <option selected value="cianjur">Cianjur</option>
                             <option value="cipanas">Cipanas</option>
                             <option value="jakarta">Jakarta</option>
-                            <option value="tangerang-bsd">Tangerang BSD</option>
-                            <option value="bandara-soeta">Bandara Soeta</option>
+                            <option value="tangerang_bsd">Tangerang BSD</option>
+                            <option value="bandara_soetta">Bandara Soetta</option>
                         </select>
                         <table class="my-3 table table-bordered table-striped">
                             <tbody id="jadwal-keberangkatan">
@@ -319,6 +319,65 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="title m-0 p-0" id="tarif">
+                        <h2 class="d-lg-none d-block text-center mb-3">
+                            Tarif <strong class="black">Perjalanan</strong>
+                        </h2>
+                    </div>
+                    <div class="mx-lg-5 mx-3">
+                        <label for="lokasi-awal">Pilih Rute Perjalanan</label>
+                        <select class="form-select" aria-label="Pilih Rute Perjalanan" id="rute-perjalanan">
+                            <option selected value="all">Semua</option>
+                            <option value="cianjur_jakarta">Cianjur - Jakarta</option>
+                            <option value="cianjur_tanggerang">Cianjur - Tanggerang</option>
+                            <option value="cianjur_bekasi">Cianjur - Bekasi</option>
+                            <option value="cianjur_bandara_soetta">Cianjur - Bandara Soeta</option>
+                            <option value="cianjur_cikarang">Cianjur - Cikarang</option>
+                        </select>
+                        <table class="my-3 table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">No.</th>
+                                    <th>Rute</th>
+                                    <th class="text-center">Tarif</th>
+                                </tr>
+                            </thead>
+                            <tbody id="daftar-tarif">
+                                <tr>
+                                    <td class="text-center">1.</td>
+                                    <td>Cianjur - Jakarta</td>
+                                    <td class="text-center">Rp 160.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2.</td>
+                                    <td>Cianjur - Tanggerang</td>
+                                    <td class="text-center">Rp 210.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3.</td>
+                                    <td>Cianjur - Bekasi</td>
+                                    <td class="text-center">Rp 210.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4.</td>
+                                    <td>Cianjur - Bandara Soetta</td>
+                                    <td class="text-center">Rp 210.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">5.</td>
+                                    <td>Cianjur - Cikarang</td>
+                                    <td class="text-center">Rp 260.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5 class="fw-bold text-center">Gratis 1 &times; makan</h5>
+                        <ul>
+                            <li>Kapasitas penumpang maksimal: 5 orang</li>
+                            <li>Apabila melebihi kapasitas harap melaporkan ke: <a href="https://wa.me/6282115442338">+628211-5442-338</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -435,7 +494,16 @@
 
     <script>
         
+        let schedule;
+        let tarif;
         $(document).ready(function () {
+            $.get('./jadwal.json', (data) => {
+                schedule = data;
+            });
+            $.get('./tarif.json', (data) => {
+                tarif = data;
+            });
+
             const currentYear = new Date().getFullYear();
             $('#currentYear').text(currentYear);
 
@@ -448,8 +516,20 @@
                     const targetPosition = $(targetId).offset().top;
                     const targetHeight = $(targetId).outerHeight();
 
-                    if (scrollPosition + 65 >= targetPosition && scrollPosition + 65 < targetPosition + targetHeight ) {
+                    if (scrollPosition >= targetPosition - 70 && scrollPosition < targetPosition - 70 + targetHeight ) {
                         $('.nav-link-header').removeClass('active');
+                        link.addClass('active');
+                    }
+                });
+
+                $('.nav-link-footer').each(function () {
+                    const link = $(this);
+                    const targetId = link.find('.footer-nav-link').attr('href');
+                    const targetPosition = $(targetId).offset().top;
+                    const targetHeight = $(targetId).outerHeight();
+
+                    if (scrollPosition >= targetPosition - 70 && scrollPosition < targetPosition - 70 + targetHeight) {
+                        $('.nav-link-footer').removeClass('active');
                         link.addClass('active');
                     }
                 });
@@ -512,6 +592,57 @@
             $('.nav-link-footer').removeClass('active');
             navLinkItem.addClass('active');
         });
+    
+        $('#lokasi-awal').change((e) => {
+            const val = $('#lokasi-awal').val();
+            const selectedSchedule = schedule[val];
+            $('#jadwal-keberangkatan').html('');
+            selectedSchedule.forEach((time, i) => {
+                $('#jadwal-keberangkatan').append(`
+                    <tr>
+                        <td class="text-center">${i+1}.</td>
+                        <td>${time}</td>
+                    </tr>
+                `);
+            });
+        });
+
+        $('#rute-perjalanan').change((e) => {
+            const val = $('#rute-perjalanan').val();
+            $('#daftar-tarif').html('');
+            if (val != 'all') {
+                const selectedTarif = tarif[val];
+                $('#daftar-tarif').html(`
+                    <tr>
+                        <td class="text-center">1.</td>
+                        <td>${selectedTarif.rute}</td>
+                        <td class="text-center">${formatRupiah(selectedTarif.tarif)}</td>
+                    </tr>
+                `);
+            } else {
+                const keys = [
+                    'cianjur_jakarta', 'cianjur_tanggerang', 'cianjur_bekasi', 'cianjur_bandara_soetta', 'cianjur_cikarang'
+                ];
+                keys.forEach((key, i) => {
+                    const selectedTarif = tarif[key];
+                    $('#daftar-tarif').append(`
+                        <tr>
+                            <td class="text-center">${i+1}.</td>
+                            <td>${selectedTarif.rute}</td>
+                            <td class="text-center">${formatRupiah(selectedTarif.tarif)}</td>
+                        </tr>
+                    `);
+                })
+            }
+        });
+
+        function formatRupiah(number) {
+            if (isNaN(number)) {
+                return "Invalid input";
+            }
+            let formattedNumber = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            return "Rp " + formattedNumber;
+        }
     </script>
 </body>
 </html>

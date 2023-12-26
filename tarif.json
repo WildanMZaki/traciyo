@@ -1,0 +1,22 @@
+{
+    "cianjur_jakarta": {
+        "rute": "Cianjur - Jakarta",
+        "tarif": 160000
+    },
+    "cianjur_tanggerang": {
+        "rute": "Cianjur - Tanggerang",
+        "tarif": 210000
+    },
+    "cianjur_bekasi": {
+        "rute": "Cianjur - Bekasi",
+        "tarif": 210000
+    },
+    "cianjur_bandara_soetta": {
+        "rute": "Cianjur - Bandara Soetta",
+        "tarif": 210000
+    },
+    "cianjur_cikarang": {
+        "rute": "Cianjur - Cikarang",
+        "tarif": 260000
+    }
+}
