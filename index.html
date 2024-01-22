@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lintas Travel Cianjur</title>
+    <title>Express Travel Cianjur - Yogyakarta</title>
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <link rel="stylesheet" href="./icon/tabler-icons.css">
-    <!-- style css -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <!-- Responsive-->
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    <!-- Google Font -->
+    <link rel="stylesheet" href="./icon/linearicons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="./common.css">
     <style>
         .title {
@@ -143,31 +139,33 @@
 <body>
     
     <header class="navbar fixed-top navbar-light bg-white shadow-sm">
-        <div class="container-fluid d-flex align-items-center">
+        <div class="container-fluid d-flex align-items-center justify-content-center justify-content-md-between px-lg-5">
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <!-- <img src="./assets/blogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top"> -->
-            <h3 class="d-inline m-0 p-0 ms-4 fw-bold">Lintas Travel</h3>
+            <div class="text-center">
+                <h3 class="m-0 p-0 fw-bold highlight">Express Travel</h3>
+                <h5 class="m-0 p-0">Cianjur - Yogyakarta</h5>
+            </div>
           </a>          
-          <nav class="w-50 m-0 header-nav">
-            <ul class="d-flex list-unstyled ms-auto text-dark justify-content-around m-0">
+          <nav class="m-0 header-nav">
+            <ul class="d-flex list-unstyled text-dark justify-content-around m-0">
                 <li class="nav-item">
-                    <a class="nav-link active text-dark nav-link-header" aria-current="page" href="#home">
-                        <p class="m-0">Home</p>
+                    <a class="nav-link active text-dark nav-link-header py-2" aria-current="page" href="#home">
+                        <span class="d-flex align-items-center"><i class="ti ti-home me-2"></i> Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark nav-link-header" href="#layanan">
-                        <p class="m-0">Layanan Kami</p>
+                    <a class="nav-link text-dark nav-link-header py-2" aria-current="page" href="#layanan">
+                        <span class="d-flex align-items-center"><i class="ti ti-dashboard me-2"></i> Layanan</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark nav-link-header" href="#jadwal-tarif">
-                        <p class="m-0">Jadwal & Tarif</p>
+                    <a class="nav-link text-dark nav-link-header py-2" aria-current="page" href="#jadwal-tarif">
+                        <span class="d-flex align-items-center"><i class="ti ti-list-details me-2"></i> Jadwal & Tarif</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark nav-link-header" href="#armada">
-                        <p class="m-0">Armada</p>
+                    <a class="nav-link text-dark nav-link-header py-2" aria-current="page" href="#armada">
+                        <span class="d-flex align-items-center"><i class="ti ti-route me-2"></i> Rute & Armada</span>
                     </a>
                 </li>
             </ul>
@@ -175,83 +173,62 @@
         </div>
     </header>
     
-    <main class="container-fluid mt-5 pt-3">
-        <section class="container">
-            <section id="home" class="row mt-lg-5 mt-3 pt-3 align-items-center">
-                <div class="col-lg-6 col-12 d-flex justify-content-center mb-3">
-                    <div class="my-lg-5">
-                        <h1 class="fw-bold">Lintas Travel Cianjur</h1>
-                        <p>Kami adalah penyedia jasa transportasi yang berpengalaman, cepat, dan terpercaya</p>
-                        <div class="">
-                            <a href="#layanan" class="text-decoration-none text-dark">
-                                <button class="btn btn-outline-warning text-dark">Selengkapnya</button>
-                            </a>
-                            <div class="dropdown d-inline ms-2">
-                                <button class="btn btn-warning dropdown-toggle" type="button" id="contacts" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Hubungi Kami
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="contacts">
-                                    <li><a class="dropdown-item" href="https://wa.me/6287728333185">Contact 1</a></li>
-                                    <li><a class="dropdown-item" href="https://wa.me/6281222519946">Contact 2</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
+    <!-- start banner Area -->
+    <hero class="mt-5 pt-3" id="home">
+        <section class="banner-area relative mt-md-5 mt-3 pt-3" id="home">
+            <div class="overlay-bg py-md-5">
+                <div class="row fullscreen d-flex align-items-center justify-content-center my-md-5 py-md-5">
+                    <div class="banner-content col-lg-6 col-md-6 text-center">
+                        <h6 class="text-white">Perlu jasa travel?</h6>
+                        <h6 class="text-white">Hubungi:</h6>
+                        <h1 class="text-uppercase highlight">
+                            Express Travel
+                        </h1>
+                        <p class="pt-10 pb-10 text-white">
+                            Kami menyediakan layanan travel rute pulang pergi Cianjur - Yogyakarta - Semarang
+                        </p>
+                        <a href="#" class="btn btn-outline-light text-uppercase">
+                            Selengkapnya
+                        </a>
+                        <a href="https://wa.me/6285703643554" class="btn btn-primary text-uppercase">
+                            <i class="ti ti-brand-whatsapp"></i> Hubungi Kami
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 d-flex justify-content-center">
-                    <div class="p-4">
-                        <img src="./assets/images/hero.png" alt="Hero Image" class="img-fluid rounded-3">
-                    </div>
-                </div>
-            </section>
+            </div>
         </section>
+    <hero>
+
+    <!-- End banner Area -->
+    <main class="container-fluid">        
 
         <div class="whats-float">
-            <a href="https://wa.me/6287728333185" target="_blank">
-                <i class="ti ti-brand-whatsapp"></i><span>Contact 1<br><small>+6287728333185</small></span>
+            <a href="https://wa.me/6285703643554" target="_blank">
+                <i class="ti ti-brand-whatsapp"></i><span>Contact 1<br><small>+6285703643554</small></span>
             </a>
         </div>
 
-        <section class="service mt-5 pt-2" id="layanan">
+        <section class="service services-area mt-lg-5 mt-3 pt-2" id="layanan">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <div class="title">
-                            <h2><strong class="black">Layanan</strong> Kami</h2>
-                            <span>Layanan terbaik, aman, tarif terjangkau, dan memuaskan</span>
-                        </div>
-                    </div>
+                <div class="row section-title">
+                    <h1><span class="highlight">Layanan</span> Kami</h1>
+                    <p>Who are in extremely love with eco friendly system.</p>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="service-box">
-                            <i class="ti ti-car text-yellow service-icon"></i>
-                            <h3>Antar Jemput</h3>
-                            <p>Travel perjalanan rute Cianjur - Jakarta</p>
-                        </div>
+                    <div class="col-md-4 single-service">
+                        <span class="ti ti-car"></span>
+                        <h4>Antar Jemput</h4>
+                        <p>Siap mengantar pulang pergi melalui rute Cianjur - Semarang - Yogyakarta</p>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="service-box">
-                            <i class="ti ti-packge-export text-yellow service-icon"></i>
-                            <h3>Pengiriman Paket</h3>
-                            <p>Paket barang, dokumen, kilat, motor, hewan peliharaan</p>
-                        </div>
+                    <div class="col-md-4 single-service">
+                        <span class="ti ti-packge-export"></span>
+                        <h4>Kirim Paket</h4>
+                        <p>Melayani pengiriman dokumen dan paket kilat dengan harga ekonomis</p>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="service-box">
-                            <i class="ti ti-steering-wheel text-yellow service-icon"></i>
-                            <h3>Carter Mobil</h3>
-                            <p>Dengan driver untuk wisata, ziarah, hajatan, dll.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="service-box">
-                            <i class="ti ti-truck-delivery text-yellow service-icon"></i>
-                            <h3>Sewa Pickup</h3>
-                            <p>Pindahan mudah di dalam dan luar kota.</p>
-                        </div>
+                    <div class="col-md-4 single-service">
+                        <span class="ti ti-map-pin"></span>
+                        <h4>Door to Door</h4>
+                        <p>Bersedia untuk menjemput dan antar sampai ke tujuan</p>
                     </div>
                 </div>
             </div>
@@ -479,9 +456,9 @@
                     </a>
                 </li>                             
                 <li class="nav-link-footer">
-                    <a href="#armada" class="footer-nav-link text-dark">
-                        <i class='ti ti-car'></i>
-                        <small>Armada</small>
+                    <a href="#rute" class="footer-nav-link text-dark">
+                        <i class='ti ti-route fw-bold'></i>
+                        <small>Rute</small>
                     </a>
                 </li>
             </ul>
@@ -497,6 +474,22 @@
         let schedule;
         let tarif;
         $(document).ready(function () {
+            const images = [
+                '../../assets/images/cianjur.jpg',
+                '../../assets/images/yogya.jpg',
+                '../../assets/images/semarang.jpeg',
+            ];
+
+            let currentIndex = 1;
+            function changeHeroBackground() {
+                const heroSection = $('.banner-area');
+                heroSection.css('background', `url(${images[currentIndex]}) center`);
+                heroSection.css('background-size', 'cover');
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            setInterval(changeHeroBackground, 5000);
+
             $.get('./jadwal.json', (data) => {
                 schedule = data;
             });

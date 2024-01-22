@@ -1,0 +1,134 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.section-title {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*-------- Start Banner Area ------------*/
+.banner-area {
+    background: url(../../assets/images/cianjur.jpg) center;
+    background-size: cover;
+}
+
+.banner-area .overlay-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 767px) {
+    .fullscreen {
+        height: auto !important;
+    }
+}
+
+.banner-content {
+    text-align: left;
+}
+
+.banner-content h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .banner-content h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .banner-content h1 br {
+        display: none;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .banner-content h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+}
+
+.banner-content h6 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1280px) {
+    .banner-content br {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-content {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+/*-------- End Banner Area ------------*/
+
+
+/*-------- Start services Area -------------*/
+.services-area .single-service {
+    background-color: #f9f9ff;
+    text-align: center;
+    padding: 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.services-area .single-service .ti {
+    color: #222;
+    font-size: 30px;
+    font-weight: 900;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.services-area .single-service h4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.services-area .single-service:hover {
+    background-color: #a6d5f1;
+    cursor: pointer;
+}
+
+.services-area .single-service:hover h4,
+.services-area .single-service:hover .ti {
+    color: #00a2ff;
+}
+
+@media (max-width: 991px) {
+    .services-area .single-service {
+        margin-bottom: 30px;
+    }
+}
+
+/*-------- End services Area -------------*/

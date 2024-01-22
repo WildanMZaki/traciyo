@@ -4,35 +4,28 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.bg-edark {
-    background-color: #1b1e23;
-}
-.text-edark {
-    color: #1b1e23;
+.highlight {
+    color: #53b7f0;
 }
 
 /* Header Navbar Section */
 .nav-link, .nav-link:hover { color: white; }
 .nav-link.active {
-    border-bottom: solid 2px #ffcc00;
+    border-bottom: solid 2px #79cbfa;
 }
 .nav-link:hover {
-    border-bottom: solid 2px #f3db79;
+    border-bottom: solid 2px #79cbfa;
 }
-
-
-
-
 
 /* Footer Section */
 footer li {            
     transition: all .55s ease;
 }
 footer li:hover {
-    border-bottom: 5px solid #f3db79;
+    border-bottom: 5px solid #79cbfa;
 }
 footer li.active {
-    border-bottom: 5px solid #ffcc00;
+    border-bottom: 5px solid #79cbfa;
 }
 .footer-nav-link {
     display: flex;
@@ -46,7 +39,17 @@ footer li.active {
 }
 footer { display: none; }
 
-@media (max-width: 660px) {
+.header-nav {
+    width: 50% !important;
+}
+
+@media (max-width: 1250px) {
+    .header-nav {
+        width: 70% !important;
+    }
+}
+
+@media (max-width: 862px) {
     .header-nav { display: none; }
 
     footer { 
