@@ -1,22 +1,30 @@
 {
-    "cianjur_jakarta": {
-        "rute": "Cianjur - Jakarta",
-        "tarif": 160000
+    "cianjur_bandung": {
+        "rute": "Cianjur - Bandung",
+        "tarif": 200000
     },
-    "cianjur_tanggerang": {
-        "rute": "Cianjur - Tanggerang",
-        "tarif": 210000
+    "cianjur_cilacap": {
+        "rute": "Cianjur - Cilacap",
+        "tarif": 350000
     },
-    "cianjur_bekasi": {
-        "rute": "Cianjur - Bekasi",
-        "tarif": 210000
+    "cianjur_banjarnegara": {
+        "rute": "Cianjur - Banjarnegara",
+        "tarif": 350000
     },
-    "cianjur_bandara_soetta": {
-        "rute": "Cianjur - Bandara Soetta",
-        "tarif": 210000
+    "cianjur_semarang": {
+        "rute": "Cianjur - Semarang",
+        "tarif": 500000
     },
-    "cianjur_cikarang": {
-        "rute": "Cianjur - Cikarang",
-        "tarif": 260000
+    "cianjur_yogyakarta": {
+        "rute": "Cianjur - Yogyakarta",
+        "tarif": 500000
+    },
+    "bandung_semarang": {
+        "rute": "Bandung - Semarang",
+        "tarif": 350000
+    },
+    "bandung_yogyakarta": {
+        "rute": "Bandung - Yogyakarta",
+        "tarif": 350000
     }
 }

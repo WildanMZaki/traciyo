@@ -90,6 +90,7 @@
     background-color: #f9f9ff;
     text-align: center;
     padding: 30px;
+    border-radius: 20px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -118,6 +119,7 @@
 .services-area .single-service:hover {
     background-color: #a6d5f1;
     cursor: pointer;
+    transform: translateY(10px);
 }
 
 .services-area .single-service:hover h4,
@@ -132,3 +134,33 @@
 }
 
 /*-------- End services Area -------------*/
+
+/*-------- Start image-gallery Area -------------*/
+.image-gallery-area {
+    background-color: #fff;
+}
+
+.image-gallery-area .single-gallery:nth-child(2) {
+    margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+    .image-gallery-area .single-gallery:nth-child(2) {
+        margin-top: 0px;
+    }
+}
+
+.image-gallery-area .single-gallery img {
+    width: 100%;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.image-gallery-area .single-gallery a:hover img {
+    opacity: .6;
+}
+
+/*-------- End image-gallery Area -------------*/

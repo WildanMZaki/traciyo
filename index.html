@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Express Travel Cianjur - Yogyakarta melayani antar jemput door to door pulang pergi dengan rute Cianjur - Semarang - Yogyakarta, melayani pengiriman paket kilat, dokumen">
+    <meta name="keywords" content="express travel cianjur yogyakarta transportasi antar jemput sampai lokasi pengiriman paket dan dokumen">
     <title>Express Travel Cianjur - Yogyakarta</title>
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/select2.min.css">
+    <link rel="stylesheet" href="./css/select2-bootstrap-5-theme.min.css">
+    <link rel="stylesheet" href="./css/select2-bootstrap-5-theme.rtl.min.css">
+    <link rel="stylesheet" href="./css/magnific-popup.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
@@ -142,7 +150,7 @@
         <div class="container-fluid d-flex align-items-center justify-content-center justify-content-md-between px-lg-5">
           <a class="navbar-brand d-flex align-items-center" href="#">
             <div class="text-center">
-                <h3 class="m-0 p-0 fw-bold highlight">Express Travel</h3>
+                <h3 class="m-0 p-0 fw-bolder highlight font-italic">Express Travel</h3>
                 <h5 class="m-0 p-0">Cianjur - Yogyakarta</h5>
             </div>
           </a>          
@@ -164,7 +172,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark nav-link-header py-2" aria-current="page" href="#armada">
+                    <a class="nav-link text-dark nav-link-header py-2" aria-current="page" href="#route-armada">
                         <span class="d-flex align-items-center"><i class="ti ti-route me-2"></i> Rute & Armada</span>
                     </a>
                 </li>
@@ -175,9 +183,9 @@
     
     <!-- start banner Area -->
     <hero class="mt-5 pt-3" id="home">
-        <section class="banner-area relative mt-md-5 mt-3 pt-3" id="home">
+        <section class="banner-area relative mt-md-5 mt-3 pt-3">
             <div class="overlay-bg py-md-5">
-                <div class="row fullscreen d-flex align-items-center justify-content-center my-md-5 py-md-5">
+                <div class="row fullscreen d-flex align-items-center justify-content-center my-md-5 py-md-5 mx-0 px-0">
                     <div class="banner-content col-lg-6 col-md-6 text-center">
                         <h6 class="text-white">Perlu jasa travel?</h6>
                         <h6 class="text-white">Hubungi:</h6>
@@ -185,7 +193,7 @@
                             Express Travel
                         </h1>
                         <p class="pt-10 pb-10 text-white">
-                            Kami menyediakan layanan travel rute pulang pergi Cianjur - Yogyakarta - Semarang
+                            Kami menyediakan layanan travel rute pulang pergi Cianjur - Semarang - Yogyakarta
                         </p>
                         <a href="#" class="btn btn-outline-light text-uppercase">
                             Selengkapnya
@@ -197,7 +205,7 @@
                 </div>
             </div>
         </section>
-    <hero>
+    </hero>
 
     <!-- End banner Area -->
     <main class="container-fluid">        
@@ -212,10 +220,10 @@
             <div class="container">
                 <div class="row section-title">
                     <h1><span class="highlight">Layanan</span> Kami</h1>
-                    <p>Who are in extremely love with eco friendly system.</p>
+                    <p>Biaya terjangkau, kualitas layanannya memukau</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 single-service">
+                    <div class="col-md-4 single-service ">
                         <span class="ti ti-car"></span>
                         <h4>Antar Jemput</h4>
                         <p>Siap mengantar pulang pergi melalui rute Cianjur - Semarang - Yogyakarta</p>
@@ -236,88 +244,36 @@
 
         <section class="mt-5 pt-2">
             <div class="container d-none d-lg-block" id="jadwal-tarif">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <div class="title m-0 p-0 mb-3">
-                            <h2><strong class="black">Jadwal &</strong> Tarif</h2>
-                            <span>Jadwal fleksibel, tarif terjangkau, gratis 1 kali makan</span>
-                        </div>
-                    </div>
+                <div class="row section-title">
+                    <h1><span class="highlight">Tarif</span> & Jadwal</h1>
+                    <p>Tarif ekonomis dan jadwal fleksibel</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <div class="title m-0 p-0" id="jadwal">
+                    <div class="m-0 p-0" id="tarif">
                         <h2 class="d-lg-none d-block text-center mb-3">
-                            Jadwal <strong class="black">Keberangkatan</strong>
+                            <div class="row section-title">
+                                <h1><span class="highlight">Tarif</span> Perjalanan</h1>
+                            </div>
                         </h2>
                     </div>
-                    <div class="mx-lg-5 mx-3">
-                        <label for="lokasi-awal">Pilih Lokasi Awal</label>
-                        <select class="form-select" aria-label="Pilih Lokasi Awal" id="lokasi-awal">
-                            <option selected value="cianjur">Cianjur</option>
-                            <option value="cipanas">Cipanas</option>
-                            <option value="jakarta">Jakarta</option>
-                            <option value="tangerang_bsd">Tangerang BSD</option>
-                            <option value="bandara_soetta">Bandara Soetta</option>
-                        </select>
-                        <table class="my-3 table table-bordered table-striped">
-                            <tbody id="jadwal-keberangkatan">
-                                <tr>
-                                    <td class="text-center">1.</td>
-                                    <td>Jam 02.00 WIB, dini hari</td>
-                                    <!-- <td>
-                                        <input type="radio" name="jadwal" id="jadwal-cianjur-1">
-                                    </td> -->
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2.</td>
-                                    <td>Jam 05.00 WIB pagi</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3.</td>
-                                    <td>Jam 09.00 WIB pagi</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3.</td>
-                                    <td>Jam 13.00 WIB siang</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3.</td>
-                                    <td>Jam 17.00 WIB sore</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3.</td>
-                                    <td>Jam 20.00 WIB malam</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3.</td>
-                                    <td>Jam 23.00 WIB malam</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="title m-0 p-0" id="tarif">
-                        <h2 class="d-lg-none d-block text-center mb-3">
-                            Tarif <strong class="black">Perjalanan</strong>
-                        </h2>
-                    </div>
-                    <div class="mx-lg-5 mx-3">
-                        <label for="lokasi-awal">Pilih Rute Perjalanan</label>
+                    <div class="mx-lg-4 mx-3">
+                        <label for="rute-perjalanan" class="form-label">Pilih Rute Perjalanan</label>
                         <select class="form-select" aria-label="Pilih Rute Perjalanan" id="rute-perjalanan">
                             <option selected value="all">Semua</option>
-                            <option value="cianjur_jakarta">Cianjur - Jakarta</option>
-                            <option value="cianjur_tanggerang">Cianjur - Tanggerang</option>
-                            <option value="cianjur_bekasi">Cianjur - Bekasi</option>
-                            <option value="cianjur_bandara_soetta">Cianjur - Bandara Soeta</option>
-                            <option value="cianjur_cikarang">Cianjur - Cikarang</option>
+                            <option value="cianjur_bandung">Cianjur - Bandung</option>
+                            <option value="cianjur_cilacap">Cianjur - Cilacap</option>
+                            <option value="cianjur_banjarnegara">Cianjur - Banjarnegara</option>
+                            <option value="cianjur_semarang">Cianjur - Semarang</option>
+                            <option value="cianjur_yogyakarta">Cianjur - Yogyakarta</option>
+                            <option value="bandung_semarang">Bandung - Semarang</option>
+                            <option value="bandung_yogyakarta">Bandung - Yogyakarta</option>
                         </select>
                         <table class="my-3 table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th class="text-center">No.</th>
+                                    <th class="text-center">Nmr</th>
                                     <th>Rute</th>
                                     <th class="text-center">Tarif</th>
                                 </tr>
@@ -325,105 +281,286 @@
                             <tbody id="daftar-tarif">
                                 <tr>
                                     <td class="text-center">1.</td>
-                                    <td>Cianjur - Jakarta</td>
-                                    <td class="text-center">Rp 160.000</td>
+                                    <td>Cianjur - Bandung</td>
+                                    <td class="text-center">Rp 200.000</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">2.</td>
-                                    <td>Cianjur - Tanggerang</td>
-                                    <td class="text-center">Rp 210.000</td>
+                                    <td>Cianjur - Cilacap</td>
+                                    <td class="text-center">Rp 350.000</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">3.</td>
-                                    <td>Cianjur - Bekasi</td>
-                                    <td class="text-center">Rp 210.000</td>
+                                    <td>Cianjur - Banjarnegara</td>
+                                    <td class="text-center">Rp 350.000</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">4.</td>
-                                    <td>Cianjur - Bandara Soetta</td>
-                                    <td class="text-center">Rp 210.000</td>
+                                    <td>Cianjur - Semarang</td>
+                                    <td class="text-center">Rp 500.000</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">5.</td>
-                                    <td>Cianjur - Cikarang</td>
-                                    <td class="text-center">Rp 260.000</td>
+                                    <td>Cianjur - Yogjakarta</td>
+                                    <td class="text-center">Rp 500.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">6.</td>
+                                    <td>Bandung - Semarang</td>
+                                    <td class="text-center">Rp 350.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">7.</td>
+                                    <td>Bandung - Yogjakarta</td>
+                                    <td class="text-center">Rp 350.000</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <h5 class="fw-bold text-center">Gratis 1 &times; makan</h5>
-                        <ul>
-                            <li>Kapasitas penumpang maksimal: 5 orang</li>
-                            <li>Apabila melebihi kapasitas harap melaporkan ke: <a href="https://wa.me/6282115442338">+628211-5442-338</a></li>
-                        </ul>
                     </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="m-0 p-0" id="jadwal">
+                        <h2 class="d-lg-none d-block text-center my-3">
+                            <div class="row section-title">
+                                <h1><span class="highlight">Jadwal</span> Keberangkatan</h1>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="mx-lg-4 mx-3">                        
+                        <table class="my-3 table table-bordered">
+                            <h6 class="d-none d-lg-block">Berikut tabel jadwal keberangkatan armada kami</h6>
+                            <thead>
+                                <tr>
+                                    <th>Nmr</th>
+                                    <th>Titik awal</th>
+                                    <th>Waktu</th>
+                                </tr>
+                            </thead>
+                            <tbody id="jadwal-keberangkatan">
+                                <tr>
+                                    <td class="text-center" rowspan="2">1.</td>
+                                    <td rowspan="2">Cianjur / Sukabumi</td>
+                                    <td>Jam 05.00 WIB, pagi</td>
+                                </tr>
+                                <tr>
+                                    <td>Jam 17.00 WIB, sore</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" rowspan="2">2.</td>
+                                    <td rowspan="2">Bandung</td>
+                                    <td>Jam 08.00 WIB, pagi</td>
+                                </tr>
+                                <tr>
+                                    <td>Jam 20.00 WIB, malam</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" rowspan="2">3.</td>
+                                    <td rowspan="2">Yogyakarta / Solo / Semarang</td>
+                                    <td>Jam 05.00 WIB, pagi</td>
+                                </tr>
+                                <tr>
+                                    <td>Jam 17.00 WIB, sore</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-5 pt-2">
+            <div class="container" id="route-armada">
+                <div class="row section-title">
+                    <h1><span class="highlight">Rute</span> Perjalanan</h1>
+                    <p class="d-none d-lg-block">Rute efisien dan menjangkau berbagai lokasi</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12">                    
+                    <div class="mx-lg-5 mx-3">
+                        <div class="mb-3">
+                            <label for="rute-perjalanan" class="form-label">Pilih Kota Asal Anda dan Pilih Rute Terbaik</label>
+                            <select class="js-example-basic-single form-select mb-3" aria-label="Pilih Kota Asal" id="kota-asal" data-placeholder="Pilih Kota Asal">
+                                <option value=""></option>
+                                <option value="Aji Barang">Aji Barang</option>
+                                <option value="Ambarawa">Ambarawa</option>
+                                <option value="Banjar">Banjar</option>
+                                <option value="Banjarnegara">Banjarnegara</option>
+                                <option value="Banyumas">Banyumas</option>
+                                <option value="Bawen">Bawen</option>
+                                <option value="Bumiayu">Bumiayu</option>
+                                <option value="Cianjur">Cianjur</option>
+                                <option value="Cilacap">Cilacap</option>
+                                <option value="Cirebon">Cirebon</option>
+                                <option value="Gombong">Gombong</option>
+                                <option value="Karang Pucung">Karang Pucung</option>
+                                <option value="Kebumen">Kebumen</option>
+                                <option value="Kendal">Kendal</option>
+                                <option value="Kutoarjo">Kutoarjo</option>
+                                <option value="Losari">Losari</option>
+                                <option value="Majalengka">Majalengka</option>
+                                <option value="Majenang">Majenang</option>
+                                <option value="Magelang">Magelang</option>
+                                <option value="Pangandaran">Pangandaran</option>
+                                <option value="Pekalongan">Pekalongan</option>
+                                <option value="Pemalang">Pemalang</option>
+                                <option value="Pejagan">Pejagan</option>
+                                <option value="Purbalingga">Purbalingga</option>
+                                <option value="Purwokerto">Purwokerto</option>
+                                <option value="Secang">Secang</option>
+                                <option value="Semarang">Semarang</option>
+                                <option value="Sleman">Sleman</option>
+                                <option value="Solo">Solo</option>
+                                <option value="Songgom">Songgom</option>
+                                <option value="Sukabumi">Sukabumi</option>
+                                <option value="Sumedang">Sumedang</option>
+                                <option value="Tasikmalaya">Tasikmalaya</option>
+                                <option value="Temanggung">Temanggung</option>
+                                <option value="Ungaran">Ungaran</option>
+                                <option value="Wates">Wates</option>
+                                <option value="Wonosobo">Wonosobo</option>
+                                <option value="Yogyakarta">Yogyakarta</option>
+                            </select>
+                        </div>
+                        <div class="row mb-3 options-jalur">
+                            <div class="card w-100 shadow rounded-4">                                
+                                <div class="card-body">
+                                    <h4 class="m-0 p-1"><u class="fw-bold">Jalur 1</u></h4>
+                                    <span class="kota-kota">Sukabumi - Cianjur - Bandung - Tasikmalaya - Banjar - Pangandaran - Majenang - Karang Pucung - Cilacap - Banyumas - Buntu - Gombong - Kebumen - Kutoarjo - Wates - Sleman - Yogyakarta</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3 options-jalur">
+                            <div class="card w-100 shadow rounded-4">                                
+                                <div class="card-body">
+                                    <h4 class="m-0 p-1"><u class="fw-bold">Jalur 2</u></h4>
+                                    <span class="kota-kota">Sukabumi - Cianjur - Bandung - Sumedang - Majalengka - Cirebon - Losari - Pemalang - Pekalongan - Kendal - Semarang - Ungaran - Ambarawa - Bawen - Solo - Yogyakarta</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3 options-jalur">
+                            <div class="card w-100 shadow rounded-4">                                
+                                <div class="card-body">
+                                    <h4 class="m-0 p-1"><u class="fw-bold">Jalur 3</u></h4>
+                                    <span class="kota-kota">Sukabumi - Cianjur - Bandung - Sumedang - Majalengka - Cirebon - Pejagan - Songgom - Bumiayu - Aji Barang - Purwokerto - Purbalingga - Banjarnegara - Wonosobo - Temanggung - Secang - Magelang - Yogyakarta</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="m-0 p-0">
+                        <h2 class="d-lg-none d-block text-center my-3">
+                            <div class="row section-title">
+                                <h1><span class="highlight">Rest Area</span></h1>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="mx-lg-5 mx-3">                        
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="text-center">Rest Area</th>
+                                </tr>
+                                <tr class="text-center">
+                                    <th>Daerah</th>
+                                    <th>Tempat</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="valign-top">Limbangan</td>
+                                    <td>RM. Sari Rasa</td>
+                                </tr>
+                                <tr>
+                                    <td>RM. Pidoa</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="valign-top">Tasikmalaya</td>
+                                    <td>RM. Sari Rasa</td>
+                                </tr>
+                                <tr>
+                                    <td>RM. Jeruk</td>
+                                </tr>
+                                <tr>
+                                    <td>Lumbir</td>
+                                    <td>POM Budiman</td>
+                                </tr>
+                                <tr>
+                                    <td>Banyumas</td>
+                                    <td>RM. Sidoadi</td>
+                                </tr>
+                                <tr>
+                                    <td>Kebumen</td>
+                                    <td>RM. Candisari</td>
+                                </tr>
+                                <tr>
+                                    <td>Cirebon</td>
+                                    <td>RM. Kita Pejagan</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>                    
                 </div>
             </div>
         </section>
 
-        <section id="armada" class="row mt-5 mb-lg-4 mb-3 pb-3">
+        <section class="row mt-5 mb-lg-4 mb-3 pb-3">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <div class="title">
-                            <h2><strong class="black">Armada</strong> Kami</h2>
-                            <span>Driver ramah dan berpengalaman, dilengkapi TV dan audio untuk armada baru</span>
-                        </div>
-                    </div>
+                <div class="row section-title mb-3">
+                    <h1><span class="highlight">Galeri</span> Kami</h1>
                 </div>
-                <div class="row">
-                    <div class="semua-armada owl-carousel owl-theme col-12">
-                        <div class="item card">
-                            <div class="card-body">
-                                <img src="./assets/images/armada9.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="item card">
-                            <div class="card-body">
-                                <img src="./assets/images/armada6.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="item card">
-                            <div class="card-body">
-                                <img src="./assets/images/armada2.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="item card">
-                            <div class="card-body">
-                                <img src="./assets/images/armada3.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="item card">
-                            <div class="card-body">
-                                <img src="./assets/images/armada5.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
+                <div class="row image-gallery-area ">
+                    <div class="col-lg-4 col-6 single-gallery">
+                        <a href="./assets/images/traciyo1.jpg" class="img-gal">
+                            <img class="img-fluid rounded-3 shadow" src="./assets/images/traciyo1.jpg" alt="">
+                        </a>                        
+                    </div>
+                    <div class="col-lg-4 col-6 single-gallery">
+                        <a href="./assets/images/traciyo2.jpg" class="img-gal">
+                            <img class="img-fluid rounded-3 shadow" src="./assets/images/traciyo2.jpg" alt="">
+                        </a>                  
+                    </div>
+
+                    <div class="col-lg-4 col-6 single-gallery">
+                        <a href="./assets/images/armada6.jpg" class="img-gal">
+                            <img class="img-fluid rounded-3 shadow" src="./assets/images/armada6.jpg" alt="">
+                        </a>                        
+                    </div>
+                    <div class="col-lg-4 col-6 single-gallery">
+                        <a href="./assets/images/traciyo3.jpg" class="img-gal">
+                            <img class="img-fluid rounded-3 shadow" src="./assets/images/traciyo3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-6 single-gallery">
+                        <a href="./assets/images/armada5.jpg" class="img-gal">
+                            <img class="img-fluid rounded-3 shadow" src="./assets/images/armada5.jpg" alt="">
+                        </a>                        
+                    </div>
+                    <div class="col-lg-4 col-6 single-gallery">
+                        <a href="./assets/images/armada3.jpg" class="img-gal">
+                            <img class="img-fluid rounded-3 shadow" src="./assets/images/armada3.jpg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section>
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="title my-0 py-0">
-                        <h2><strong class="black">Lokasi</strong> Kami</h2>
-                        <!-- <span>Driver ramah dan berpengalaman, dilengkapi TV dan audio untuk armada baru</span> -->
-                    </div>
-                </div>
+            <div class="row section-title">
+                <h1><span class="highlight">Lokasi</span> Kami</h1>
             </div>
             <div class="row">
                 <div class="col s12">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7673060211005!2d107.1442813701934!3d-6.798140426859551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6853125d8e8fd7%3A0x2a7dd88a3492a2ff!2sPerum%20hukoci!5e0!3m2!1sid!2sid!4v1703592235969!5m2!1sid!2sid"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.516145805144!2d107.11260180000002!3d-6.845082800000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x510e6e55e2d52498!2sEXPRESS+TRAVEL!5e0!3m2!1sid!2sid!4v1563112630414!5m2!1sid!2sid"
+                        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </section>
 
         <section class="d-lg-block border-2 border-top p-lg-0 mb-5 mb-lg-0 pb-4">
-            <div class="row py-3">
-                <p class="text-center m-0 p-0">Copyright &copy; <span id="currentYear" data-default="2023"></span> - <a href="https://vetencode.com" class="text-dark">Vetencode</a></p>
+            <div class="py-3 d-flex justify-content-center">
+                <p class="m-0 p-0">Copyright &copy; <span id="currentYear" data-default="2023"></span> - <a href="https://vetencode.com" class="highlight">Vetencode</a></p>
             </div>
         </section>
     </main>
@@ -432,31 +569,31 @@
         <nav class="w-100">
             <ul class="list-unstyled d-flex w-100 justify-content-around my-3">
                 <li class="nav-link-footer active">
-                    <a href="#home" class="footer-nav-link text-dark">
+                    <a href="#home" class="footer-nav-link text-dark text-decoration-none">
                         <i class='bx bx-home'></i>
                         <small>Home</small>
                     </a>
                 </li>
                 <li class="nav-link-footer">
-                    <a href="#layanan" class="footer-nav-link text-dark">
+                    <a href="#layanan" class="footer-nav-link text-dark text-decoration-none">
                         <i class='bx bxs-dashboard'></i>
                         <small>Layanan</small>
                     </a>
                 </li>
                 <li class="nav-link-footer">
-                    <a href="#jadwal" class="footer-nav-link text-dark">
-                        <i class='ti ti-list'></i>
-                        <small>Jadwal</small>
-                    </a>
-                </li>
-                <li class="nav-link-footer">
-                    <a href="#tarif" class="footer-nav-link text-dark">
+                    <a href="#tarif" class="footer-nav-link text-dark text-decoration-none">
                         <i class='ti ti-currency-dollar fw-bold'></i>
                         <small>Tarif</small>
                     </a>
                 </li>                             
                 <li class="nav-link-footer">
-                    <a href="#rute" class="footer-nav-link text-dark">
+                    <a href="#jadwal" class="footer-nav-link text-dark text-decoration-none">
+                        <i class='ti ti-list'></i>
+                        <small>Jadwal</small>
+                    </a>
+                </li>
+                <li class="nav-link-footer">
+                    <a href="#route-armada" class="footer-nav-link text-dark text-decoration-none">
                         <i class='ti ti-route fw-bold'></i>
                         <small>Rute</small>
                     </a>
@@ -466,18 +603,21 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/select2.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
         
-        let schedule;
         let tarif;
         $(document).ready(function () {
             const images = [
                 '../../assets/images/cianjur.jpg',
-                '../../assets/images/yogya.jpg',
+                '../../assets/images/bandung.jpeg',
                 '../../assets/images/semarang.jpeg',
+                '../../assets/images/solo.jpeg',
+                '../../assets/images/yogya.jpg',
             ];
 
             let currentIndex = 1;
@@ -490,9 +630,6 @@
 
             setInterval(changeHeroBackground, 5000);
 
-            $.get('./jadwal.json', (data) => {
-                schedule = data;
-            });
             $.get('./tarif.json', (data) => {
                 tarif = data;
             });
@@ -509,7 +646,7 @@
                     const targetPosition = $(targetId).offset().top;
                     const targetHeight = $(targetId).outerHeight();
 
-                    if (scrollPosition >= targetPosition - 70 && scrollPosition < targetPosition - 70 + targetHeight ) {
+                    if (scrollPosition >= targetPosition - 30 && scrollPosition < targetPosition - 30 + targetHeight ) {
                         $('.nav-link-header').removeClass('active');
                         link.addClass('active');
                     }
@@ -521,37 +658,14 @@
                     const targetPosition = $(targetId).offset().top;
                     const targetHeight = $(targetId).outerHeight();
 
-                    if (scrollPosition >= targetPosition - 70 && scrollPosition < targetPosition - 70 + targetHeight) {
+                    if (scrollPosition >= targetPosition - 30 && scrollPosition < targetPosition - 30 + targetHeight) {
                         $('.nav-link-footer').removeClass('active');
                         link.addClass('active');
                     }
                 });
             });
 
-            $(".semua-armada").owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: false,
-                items: 3,
-                autoplay: true, // Enable auto-scrolling
-                autoplayTimeout: 2000, // Set time between slides in milliseconds
-                autoplayHoverPause: true,
-                autoplaySpeed: 1000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 3
-                    },
-                    1500: {
-                        items: 3
-                    }
-                } // Set the speed of the auto-scrolling animation// Pause on hover
-            });
+            $('.img-gal').magnificPopup({ type: 'image' });
         });
         $('header .header-nav').on('click', '.nav-link-header', (e) => {
             e.preventDefault();
@@ -586,20 +700,21 @@
             navLinkItem.addClass('active');
         });
     
-        $('#lokasi-awal').change((e) => {
-            const val = $('#lokasi-awal').val();
-            const selectedSchedule = schedule[val];
-            $('#jadwal-keberangkatan').html('');
-            selectedSchedule.forEach((time, i) => {
-                $('#jadwal-keberangkatan').append(`
-                    <tr>
-                        <td class="text-center">${i+1}.</td>
-                        <td>${time}</td>
-                    </tr>
-                `);
+        $('#kota-asal').change((e) => {
+            const val = $('#kota-asal').val();
+            $('.options-jalur').each((i, option) => {
+                const exists = ($(option).find('.kota-kota').html()).includes(val);
+                if (exists) {
+                    $(option).removeClass('d-none');
+                } else {
+                    $(option).addClass('d-none');
+                }
             });
         });
 
+        $('#kota-asal').select2({
+            allowClear: true,
+        });
         $('#rute-perjalanan').change((e) => {
             const val = $('#rute-perjalanan').val();
             $('#daftar-tarif').html('');
@@ -614,8 +729,15 @@
                 `);
             } else {
                 const keys = [
-                    'cianjur_jakarta', 'cianjur_tanggerang', 'cianjur_bekasi', 'cianjur_bandara_soetta', 'cianjur_cikarang'
+                    'cianjur_bandung',
+                    'cianjur_cilacap',
+                    'cianjur_banjarnegara',
+                    'cianjur_semarang',
+                    'cianjur_yogyakarta',
+                    'bandung_semarang',
+                    'bandung_yogyakarta'
                 ];
+
                 keys.forEach((key, i) => {
                     const selectedTarif = tarif[key];
                     $('#daftar-tarif').append(`

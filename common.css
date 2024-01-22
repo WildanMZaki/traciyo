@@ -8,6 +8,10 @@
     color: #53b7f0;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 /* Header Navbar Section */
 .nav-link, .nav-link:hover { color: white; }
 .nav-link.active {
@@ -66,4 +70,8 @@ footer { display: none; }
 
 .service-icon {
     font-size: 5rem !important;
+}
+
+.valign-top {
+    vertical-align: top;
 }
